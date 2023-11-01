@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from products.models import ProductCategory
+from products.models import ProductCategory, Product
 
 
 def index(request):
@@ -7,5 +7,8 @@ def index(request):
 
 
 def products(request):
-    product = {'products': ProductCategory.objects.all()}
+    product = {
+        'products': Product.objects.all(),
+        'categories': ProductCategory.objects.all()
+    }
     return render(request, 'products/products.html', product)
