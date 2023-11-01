@@ -1,0 +1,1 @@
+[{"model": "products.product", "pk": 1, "fields": {"name": "Носки", "description": "Хорошие носочки", "price": "999.00", "quantity": 20, "image": "products_images/студак.jpg", "category": 1}}]
