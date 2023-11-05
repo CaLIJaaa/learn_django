@@ -7,8 +7,8 @@ def index(request):
 
 
 def products(request):
-    product = {
+    context = {
         'products': Product.objects.all(),
         'categories': ProductCategory.objects.all()
     }
-    return render(request, 'products/products.html', product)
+    return render(request, 'products/products.html', context)
